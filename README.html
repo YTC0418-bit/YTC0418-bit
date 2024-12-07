@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<title>Map Example</title>
+		<script type="text/javascript">
+var em=null,map=null;
+// H5 plus事件处理
+function plusReady(){
+	// 确保DOM解析完成
+	if(!em||!window.plus||map){return};
+	map = new plus.maps.Map("map");
+}
+if(window.plus){
+	plusReady();
+}else{
+	document.addEventListener("plusready", plusReady, false);
+}
+// DOMContentloaded事件处理
+document.addEventListener("DOMContentLoaded", function(){
+	em=document.getElementById("map");
+	plusReady();
+},false);
+		</script>
+		<style type="text/css">
+#map {
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	line-height: 200px;
+	text-align: center;
+	background: #FFFFFF;
+}
+		</style>
+	</head>
+	<body>
+		<div id="map">地图加载中...</div>
+	</body>
+</html>
+
+<!---
+YTC0418-bit/YTC0418-bit is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
